@@ -16,19 +16,15 @@ struct ContentView: View {
                 .bold()
                 .padding()
                 .frame(alignment: .top)
-            List{
-                NavigationStack{
-                    NavigationLink("Stack", destination: StackView())
-                }
-                    
-                NavigationStack{
-                    NavigationLink("Queue", destination: QueueView())
-                }
-                NavigationStack{
-                    NavigationLink("Linked List", destination: LinkedListView())
-                }
-                
+            NavigationStack{
+                NavigationLink("Stack", destination: StackView())
+            
+                NavigationLink("Queue", destination: QueueView())
+            
+                NavigationLink("Linked List", destination: LinkedListView(linkedList: LinkedList()))
             }
+            
+            
         }
     }
 }

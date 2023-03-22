@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct QueueView: View {
-    @StateObject var queue = Queue(length: 0)
+    @StateObject var queue = Queue(length: 10)
     @State private var input: String = ""
     @State private var peeking: String = ""
     
     var body: some View {
         VStack{
-            Text("Stack")
+            Text("Queue")
                 .font(.title)
                 .bold()
                 .padding()
