@@ -9,13 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Visualising Data Structures")
+                .font(.title)
+                .bold()
+                .padding()
+                .frame(alignment: .top)
+            List{
+                NavigationStack{
+                    NavigationLink("Stack", destination: StackView())
+                }
+                    
+                NavigationStack{
+                    NavigationLink("Queue", destination: QueueView())
+                }
+                NavigationStack{
+                    NavigationLink("Linked List", destination: LinkedListView())
+                }
+                
+            }
         }
-        .padding()
     }
 }
 
